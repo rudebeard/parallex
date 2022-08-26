@@ -7,6 +7,7 @@
 body {
   height: 100%;
   width: 100%;
+  font-family: sans-serif;
 }
 
 .image1, .image2, .image3, .image4 { 
@@ -16,6 +17,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   position: relative;
+  opacity: 0.8;
 }
 
 .image1 {
@@ -33,31 +35,95 @@ body {
   min-height: 100%;
 }
 
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .image4 {
   background-image: url("./images/pic4.jpg");
   min-height: 100%;
 }
 
-img {
+img { 
+  width: 600px; 
+}
+
+.heading {
+  display: flex;
+  justify-content: center; 
+  height: 100vh;
+  align-items: center;
+}
+
+span { 
+  font-size: 3rem;
+  background-color: rgb(30, 30, 30);
+  color: aqua;
+  padding: 20px 40px;
+  letter-spacing: 1rem; 
+  border-radius: 35px 0 ; 
+  outline: 8px solid purple;
+  outline-offset: 6px;
+  outline-style: inset;
   opacity: 0.8;
 }
 
-.section-light{
-  background-color: rgb(224, 221, 221);
-  padding: 50px 0;
-  display: block; 
+.heading-large {
+  font-size: 5rem;
+  text-transform: uppercase;
+  outline-offset: 12px;
 }
-.section-light h2{
-padding-left: 550px;
-padding-bottom: 48px;
-text-transform: uppercase;
-font-size: 48px;
-font-style: italic;
-font-weight: 600;
-text-shadow: 5px 5px 10px;
+
+.section{
+  text-align:center;
+  padding:50px 80px;
+}
+
+.section-light{
+  position: relative;
+  background-color: rgb(224, 221, 221); 
+  display: block;
+}
+.section-light h2{ 
+  padding-bottom: 24px;
+  text-transform: uppercase;
+  font-size: 48px;
+  font-style: italic;
+  font-weight: 600;
+  text-shadow: 5px 5px 10px;
 }
 .section-light p{
   color: black;
   font-size: 18px;
-  font-style: oblique;
+  font-style: oblique; 
+  text-align:center;
 }
+.section-dark {
+  position: relative;
+  background-color: rgb(22, 22, 22); 
+  display: block;
+}
+.section-dark h2{
+  color: yellow; 
+  padding-bottom: 24px;
+  text-transform: uppercase;
+  font-size: 48px;
+  font-style: italic;
+  font-weight: 600;
+  text-shadow: 5px 5px 10px;
+}
+.section-dark p{
+  color:#fff;
+  font-size: 18px;
+  font-style: oblique; 
+  text-align:center;
+}
+
+@media(max-width:568px){
+  .image1, .image2, .image3, .image4 {
+      background-attachment:scroll;
+  }
+}    
